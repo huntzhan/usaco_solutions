@@ -79,13 +79,11 @@ int main() {
   }
 
   // output.
-  int saturday_count = day_count[5];
-  int sunday_count = day_count[6];
-  for (size_t index = 6;
-       index != 6 + day_count.size(); ++index) {
-    const size_t actual_index = index % day_count.size();
+  const int kOffset = 6;
+  for (size_t index = 0; index != day_count.size(); ++index) {
+    const size_t actual_index = (index + kOffset) % day_count.size();
     fout << day_count[actual_index];
-    if (index != 6 + day_count.size() - 1) {
+    if (index != day_count.size() - 1) {
       fout << " ";
     }
   }
