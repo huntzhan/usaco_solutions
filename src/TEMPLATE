@@ -1,7 +1,7 @@
 /*
 ID: program41
 LANG: C++11
-TASK: 
+TASK: TAG
 */
 #include <ostream>
 #include <fstream>
@@ -12,7 +12,7 @@ using std::ofstream;
 using std::endl;
 using std::string;
 
-const string kTask = "";
+const string kTask = "TAG";
 const string kInputFile = kTask + ".in";
 const string kOutputFile = kTask + ".out";
 
