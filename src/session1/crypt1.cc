@@ -40,10 +40,10 @@ bool IsValidNumber(const int &number,
 }
                    
 bool CheckPrimeCryptarithm(const int &multiplier,
-                           const int &multiplicant,
+                           const int &multiplicand,
                            const set<char> &valid_digits) {
-  const int single_digit = multiplicant % 10;
-  const int ten_digit = multiplicant / 10;
+  const int single_digit = multiplicand % 10;
+  const int ten_digit = multiplicand / 10;
   const int first_result = single_digit * multiplier;
   const int second_result = ten_digit * multiplier;
 
@@ -113,14 +113,14 @@ int main() {
 
   const auto multipliers = GenerateValidNumbers(
       3, valid_digits);
-  const auto multiplicants = GenerateValidNumbers(
+  const auto multiplicands = GenerateValidNumbers(
       2, valid_digits);
 
   int counter = 0;
   for (const string &multiplier : multipliers) {
-    for (const string &multiplicant : multiplicants) {
+    for (const string &multiplicand : multiplicands) {
       bool flag = CheckPrimeCryptarithm(
-          stoi(multiplier), stoi(multiplicant),
+          stoi(multiplier), stoi(multiplicand),
           valid_digits);
       if (flag) {
         ++counter;
