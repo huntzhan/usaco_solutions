@@ -3,6 +3,6 @@ set(SESSION1
     milk2 transform namenum palsquare dualpal
     milk barn1 crypt1
     ariprog milk3
-    numtri pprime)
+    numtri pprime sprime)
 
 build_session("${SESSION1}")
